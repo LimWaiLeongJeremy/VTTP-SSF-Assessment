@@ -57,7 +57,7 @@ public class RedisConfig {
     //     );
     //     return template;
     // }
-    @Bean(name = "exchange")
+    @Bean(name = "data")
     @Scope("singleton")
     public RedisTemplate<String, Data> redisTemplate() {
         final RedisStandaloneConfiguration config = new RedisStandaloneConfiguration();
