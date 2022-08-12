@@ -18,7 +18,7 @@ import vttp.ssf.assessment.model.Data;
 import vttp.ssf.assessment.model.Datum;
 
 @Service
-public class NewsService {
+public class NewsService implements NewsRepo{
     private static final Logger logger = LoggerFactory.getLogger(NewsService.class);
     String cryptoUrl = "https:min-api.cryptocompare.com/data/v2/news/?lang=EN";
 
@@ -33,5 +33,19 @@ public class NewsService {
         ArrayList<HashMap> dataHashMap = new ArrayList<>();
 
         return dataHash;
+    }
+
+
+    @Override
+    public void save(Data data) {
+        // TODO Auto-generated method stub
+        
+    }
+
+
+    @Override
+    public Data load(String id) {
+        // TODO Auto-generated method stub
+        return null;
     }
 }
