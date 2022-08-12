@@ -9,7 +9,6 @@ public class Datum {
     private String body;
     private String tags;
     private String categories;
-
     
     public String getId() {
         return id;

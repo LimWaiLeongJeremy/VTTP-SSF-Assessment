@@ -23,11 +23,11 @@ public class NewsController {
     private NewsService service;
 
     @GetMapping("/")
-    public void lsCountryCode(Model model) {
+    public String lsCountryCode(Model model) {
+        Datum data = service.getArticale();
         
-        HashMap l = service.getArticale();
-        logger.info(l.toString());
-        model.addAttribute(l);
+        model.addAttribute(data);
+        return "index";
     }
 //         Map<String, String> lsArticle = service.getArticles();
 //         List<String> lsOfArt = Arrays.asList(lsArticle.keySet().toArray(new String[0]));
