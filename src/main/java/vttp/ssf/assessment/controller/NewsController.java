@@ -1,5 +1,6 @@
 package vttp.ssf.assessment.controller;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -24,7 +25,7 @@ public class NewsController {
 
     @GetMapping("/")
     public String lsCountryCode(Model model) {
-        Datum data = service.getArticale();
+        ArrayList<Datum> data = service.getArticale();
         
         model.addAttribute(data);
         return "index";
